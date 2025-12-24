@@ -1,0 +1,52 @@
+sawari/
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+├── SETUP.md
+├── start.bat
+├── start.sh
+├── vite.config.js
+├── public/
+├── server/
+│   ├── package.json
+│   ├── server.js
+│   ├── models/
+│   │   ├── Driver.js
+│   │   ├── Ride.js
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── dashboard.js
+│   │   └── rides.js
+│   └── node_modules/
+│       └── [many dependencies, e.g., mongoose, express, etc.]
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    ├── assets/
+    │   └── react.svg
+    ├── pages/
+    │   ├── AdminDashboard.jsx
+    │   ├── Dashboard.css
+    │   ├── DriverDashboard.jsx
+    │   ├── DriverSignup.jsx
+    │   ├── LandingPage.jsx
+    │   ├── Login.css
+    │   ├── Login.jsx
+    │   ├── TripBooking.css
+    │   ├── TripBooking.jsx
+    │   ├── UserDashboard.jsx
+    │   └── UserSignup.jsx
+    └── utils/
+        └── api.js
+
+
+All passwords: Driver@123
+rajesh.driver@sawari.com - Economy (Maruti Swift)
+amit.driver@sawari.com - Comfort (Honda City)
+vikram.driver@sawari.com - Premium (Toyota Camry)
+suresh.driver@sawari.com - XL (Toyota Innova)
+mohammed.driver@sawari.com - Economy (Hyundai i20)
