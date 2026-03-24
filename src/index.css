@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+.text-rotator {
+  display: inline-block;
+  overflow: hidden;
+  height: 2em; /* adjust to your text height */
+  position: relative;
+}
+
+.text-rotator span {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideUp 6s linear infinite; /* total duration = # of texts * 2s */
+}
+
+.text-rotator span:nth-child(1) {
+  animation-delay: 0s;
+}
+.text-rotator span:nth-child(2) {
+  animation-delay: 2s;
+}
+.text-rotator span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(70%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
