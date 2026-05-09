@@ -29,7 +29,7 @@ app.use(session({
   saveUninitialized: false
 }));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/sawari')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://raman251:2kuZBzjuEFFE0MmH@cluster0.g8ahb8c.mongodb.net/sawari')
   .then(() => console.log('MongoDB connected'));
 
 app.use('/api/auth', authRoutes);
