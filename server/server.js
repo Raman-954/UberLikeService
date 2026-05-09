@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -16,10 +18,10 @@ dotenv.config();
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
-  cors: { origin: 'http://localhost:5173', credentials: true }
+  cors: { origin: '*', credentials: true }
 });
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,8 +31,9 @@ app.use(session({
   saveUninitialized: false
 }));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://raman251:2kuZBzjuEFFE0MmH@cluster0.g8ahb8c.mongodb.net/sawari')
-  .then(() => console.log('MongoDB connected'));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.log(err));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/rides', rideRoutes);
@@ -100,6 +103,8 @@ io.on('connection', (socket) => {
 
 app.set('io', io);
 
-httpServer.listen(5000, () =>
-  console.log('🚕 Sawari backend running on port 5000')
+const PORT = process.env.PORT || 5000;
+
+httpServer.listen(PORT, () =>
+  console.log(`🚕 Sawari backend running on port ${PORT}`)
 );
