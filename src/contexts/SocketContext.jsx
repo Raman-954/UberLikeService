@@ -24,7 +24,7 @@ export const SocketProvider = ({ children }) => {
         const user = res.data?.user;
 
         if (user) {
-          newSocket = io('http://localhost:5000', {
+          newSocket = io('https://sawari-backend-vxxo.onrender.com', {
             withCredentials: true,
             transports: ['websocket', 'polling'],
             reconnection: true,
