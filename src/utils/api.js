@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
-
+const API_URL = "https://sawari-backend-vxxo.onrender.com"
 // Create axios instance with credentials
 const api = axios.create({
   baseURL: API_URL,
