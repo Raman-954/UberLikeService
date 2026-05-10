@@ -51,9 +51,13 @@ router.post('/signup/user', [
       }
     });
   } catch (error) {
-    console.error('Signup error:', error);
-    res.status(500).json({ message: 'Server error during signup' });
+console.error('Signup error:', error);
+
+res.status(500).json({
+error: error.message,
+stack: error.stack
   }
+                     )}
 });
 
 // Driver Signup
@@ -121,8 +125,11 @@ router.post('/signup/driver', [
       }
     });
   } catch (error) {
-    console.error('Driver signup error:', error);
-    res.status(500).json({ message: 'Server error during driver signup' });
+console.error('Driver signup error:', error);
+
+res.status(500).json({
+error: error.message,
+stack: error.stack });
   }
 });
 
