@@ -22,7 +22,9 @@ const io = new Server(httpServer, {
 app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.get('/', (req, res) => {
+  res.send('Sawari Backend Running 🚕');
+});
 app.use(session({
   secret: 'sawari-secret',
   resave: false,
