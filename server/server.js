@@ -32,9 +32,9 @@ app.use(session({
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log(err));
-app.get('/',(req,res){
-  res.send('working');
-};
+app.get('/', (req, res) => {
+  res.send('Server running');
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/rides', rideRoutes);
 app.use('/api/dashboard', dashboardRoutes);
