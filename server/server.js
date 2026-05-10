@@ -47,9 +47,9 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.log(err));
 
-app.use('/api/auth', authRoutes);
-app.use('/api/rides', rideRoutes);
-app.use('/api/dashboard', dashboardRoutes);
+app.use('/auth', authRoutes);
+app.use('/rides', rideRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 const userSockets = new Map();
 const driverSockets = new Map();
