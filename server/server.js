@@ -51,7 +51,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/rides', rideRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-// Maps for reconnect safety and direct socket targeting if needed
 const userSockets = new Map();
 const driverSockets = new Map();
 
@@ -87,7 +86,7 @@ socket.on('ride:join', ({ rideId }) => {
 if (!rideId) return;
 
 ```
-const room = `ride:${rideId}`;
+const room = 'ride:' + rideId;
 socket.join(room);
 ```
 
@@ -97,7 +96,7 @@ socket.on('driver:locationUpdate', async ({ rideId, location }) => {
 if (!rideId || !location) return;
 
 ```
-io.to(`ride:${rideId}`).emit('driver:location', { location });
+io.to('ride:' + rideId).emit('driver:location', { location });
 
 if (socket.data.driverId) {
   try {
@@ -135,6 +134,6 @@ app.set('io', io);
 
 const PORT = process.env.PORT || 5000;
 
-httpServer.listen(PORT, () =>
-console.log(`🚕 Sawari backend running on port ${PORT}`)
-);
+httpServer.listen(PORT, () => {
+console.log(`🚕 Sawari backend running on port ${PORT}`);
+});
