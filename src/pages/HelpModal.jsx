@@ -9,19 +9,19 @@ export default function HelpModal({ open, onClose }) {
       name: "Aniket Kumar",
       image: "/creators/aniket.jpg",
       phone: "+91 98765 43210",
-      email: "aniket@sawaari.com"
+      email: "aniket@sawari.com"
     },
     {
       name: "Rahul Sharma",
       image: "/creators/rahul.jpg",
       phone: "+91 91234 56789",
-      email: "rahul@sawaari.com"
+      email: "rahul@sawari.com"
     },
     {
       name: "Priya Singh",
       image: "/creators/priya.jpg",
       phone: "+91 99887 66554",
-      email: "priya@sawaari.com"
+      email: "priya@sawari.com"
     }
   ];
 
