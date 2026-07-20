@@ -51,7 +51,7 @@ const LandingPage = () => {
       <nav className="flex items-center justify-center px-8 py-4 border-b bg-black text-white max-w-3xl ml-105 mt-5 space-x-10 rounded-4xl ">
         <div className="flex items-center mr-120 space-x-3">
           <img src="./logo.png" alt="Sawaari logo" className="w-10" />
-          <h1 className="text-2xl font-bold">Sawaari</h1>
+          <h1 className="text-2xl font-bold">Sawari</h1>
         </div>
 
         <div className="hidden md:flex gap-6 text-sm font-medium">
@@ -108,7 +108,7 @@ const LandingPage = () => {
       {/* HOW IT WORKS */}
       <section className="px-6 md:px-40 py-20 bg-white mt-13">
         <h3 className="text-3xl md:text-4xl font-extrabold mb-12 text-gray-900">
-          Why ride with <span className="text-black">Sawaari?</span>
+          Why ride with <span className="text-black">Sawari?</span>
         </h3>
 
         <div className="grid md:grid-cols-3 gap-10">
@@ -232,13 +232,13 @@ const LandingPage = () => {
             {/* RIGHT CONTENT */}
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
-                The Sawaari you know,
+                The Sawari you know,
                 <br />
                 reimagined for business
               </h1>
 
               <p className="mt-6 text-gray-600 text-lg max-w-xl">
-                Sawaari for Business is a platform for managing global rides and
+                Sawari for Business is a platform for managing global rides and
                 meals, and local deliveries, for companies of any size.
               </p>
 
