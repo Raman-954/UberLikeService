@@ -12,7 +12,7 @@ export default function UberBusiness() {
           onClick={() => navigate("/")}
         >
           <img src="/logo.png" alt="Sawaari" className="w-9 h-9" />
-          <span className="text-xl font-bold">Sawaari Business</span>
+          <span className="text-xl font-bold">Sawari Business</span>
         </div>
 
         <div className="flex items-center gap-6 text-sm font-medium">
@@ -63,7 +63,7 @@ export default function UberBusiness() {
       {/* ================= FEATURES ================= */}
       <section className="bg-gray-50 px-8 md:px-24 py-20">
         <h2 className="text-3xl font-bold text-center mb-14">
-          Why businesses choose Sawaari
+          Why businesses choose Sawari
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -95,7 +95,7 @@ export default function UberBusiness() {
       {/* ================= HOW IT WORKS ================= */}
       <section className="px-8 md:px-24 py-20">
         <h2 className="text-3xl font-bold mb-12">
-          How Sawaari Business works
+          How Sawari Business works
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -134,7 +134,7 @@ export default function UberBusiness() {
             Ready to move your business?
           </h2>
           <p className="mt-4 text-gray-300 text-lg">
-            Join thousands of companies using Sawaari Business to move smarter.
+            Join thousands of companies using Sawari Business to move smarter.
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -152,7 +152,7 @@ export default function UberBusiness() {
       <footer className="bg-neutral-900 text-gray-300 px-8 md:px-24 py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
-            <h3 className="text-white text-lg font-bold">Sawaari</h3>
+            <h3 className="text-white text-lg font-bold">Sawari</h3>
             <p className="mt-2 text-sm">
               Smart mobility for modern businesses.
             </p>
