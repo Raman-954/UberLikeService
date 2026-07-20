@@ -115,7 +115,7 @@ export default function AvailableDrivers() {
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-black font-bold">
             S
           </div>
-          <span className="text-lg font-semibold tracking-wide">SAWAARI</span>
+          <span className="text-lg font-semibold tracking-wide">SAWARI</span>
         </div>
         <button
           onClick={() => navigate('/trip')}
