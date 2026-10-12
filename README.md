@@ -237,11 +237,8 @@ sawari/
 
 ## 🚀 Future Enhancements
 
-* Real-time tracking (Socket.io)
 * Payment integration (Razorpay)
-* Rating & review system
 * Surge pricing
-* Admin panel
 * Live chat (user ↔ driver)
 
 
