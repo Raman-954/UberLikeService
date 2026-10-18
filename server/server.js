@@ -15,11 +15,15 @@ dotenv.config();
 
 const app = express();
 const httpServer = createServer(app);
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://sawari-frontend-xzui.onrender.com'
+];
 const io = new Server(httpServer, {
-  cors: { origin: 'https://sawari-frontend-xzui.onrender.com', credentials: true }
+  cors: { origin: 'allowedOrigins', credentials: true }
 });
 
-app.use(cors({ origin: 'https://sawari-frontend-xzui.onrender.com', credentials: true }));
+app.use(cors({ origin: 'allowedOrigins', credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,7 +33,7 @@ app.use(session({
   saveUninitialized: false
 }));
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/sawari')
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log(err));
 app.get('/', (req, res) => {
