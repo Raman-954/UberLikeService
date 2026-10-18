@@ -37,12 +37,21 @@ useEffect(() => {
 
   map.current = L.map(mapRef.current).setView([28.6139, 77.2090], 12);
 
-  L.tileLayer(
-    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-    {
-      attribution: "&copy; OpenStreetMap & Carto",
-    }
-  ).addTo(map.current);
+  // L.tileLayer(
+  //   "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+  //   {
+  //     attribution: "&copy; OpenStreetMap & Carto",
+  //   }
+  // ).addTo(map.current);
+  
+L.tileLayer(
+  "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    attribution: "&copy; OpenStreetMap contributors",
+    maxZoom: 19,
+  }
+).addTo(map.current);
+
 
   return () => map.current.remove();
 }, []);
