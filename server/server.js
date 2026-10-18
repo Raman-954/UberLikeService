@@ -20,10 +20,10 @@ const allowedOrigins = [
   'https://sawari-frontend-xzui.onrender.com'
 ];
 const io = new Server(httpServer, {
-  cors: { origin: 'allowedOrigins', credentials: true }
+  cors: { origin: allowedOrigins, credentials: true }
 });
 
-app.use(cors({ origin: 'allowedOrigins', credentials: true }));
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
